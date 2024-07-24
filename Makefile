@@ -49,7 +49,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint/flake8: ## check style with flake8
-	flake8 langchain_code_loader tests
+	flake8 chepochem tests
 
 
 lint: lint/flake8 ## check style
@@ -61,15 +61,15 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source langchain_code_loader -m pytest
+	coverage run --source chepochem -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/langchain_code_loader.rst
+	rm -f docs/chepochem.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ langchain_code_loader
+	sphinx-apidoc -o docs/ chepochem
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

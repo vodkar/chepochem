@@ -1,47 +1,55 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "langchain_code_loader"
+name = "chepochem"
 version = "0.1.0"
-description = "Package for uploading project code to RAG system on Langchain."
+description = "Package for uploading project code."
 readme = "README.rst"
-authors = [
-  {name = "Kirill Gladkikh", email = "boombarah@gmail.com"}
-]
-maintainers = [
-  {name = "Kirill Gladkikh", email = "boombarah@gmail.com"}
-]
-classifiers = [
+authors = [{ name = "Kirill Gladkikh", email = "boombarah@gmail.com" }]
+maintainers = [{ name = "Kirill Gladkikh", email = "boombarah@gmail.com" }]
+classifiers = []
+license = { text = "BSD license" }
+dependencies = []
 
-]
-license = {text = "BSD license"}
-dependencies = [
-  
-]
+[tool.poetry]
+name = "chepochem"
+version = "0.1.0"
+description = ""
+authors = ["vodkar <boombarah@gmail.com>"]
+license = "BSD"
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+attr = "^0.3.2"
+jedi = "^0.19.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 
 [project.optional-dependencies]
 dev = [
-    "coverage",  # testing
-    "mypy",  # linting
-    "pytest",  # testing
-    "ruff"  # linting
+  "coverage", # testing
+  "mypy",     # linting
+  "pytest",   # testing
+  "ruff",     # linting
 ]
 
 [project.urls]
 
-bugs = "https://github.com/vodkar/langchain_code_loader/issues"
-changelog = "https://github.com/vodkar/langchain_code_loader/blob/master/changelog.md"
-homepage = "https://github.com/vodkar/langchain_code_loader"
+bugs = "https://github.com/vodkar/chepochem/issues"
+changelog = "https://github.com/vodkar/chepochem/blob/master/changelog.md"
+homepage = "https://github.com/vodkar/chepochem"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.setuptools.package-data]
 "*" = ["*.*"]
-
-
 
 
 # Mypy
@@ -60,4 +68,3 @@ warn_no_return = true
 module = "tests.*"
 allow_untyped_defs = true
 disable_error_code = "attr-defined"
-

@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use Langchain Project Code Loader in a project::
+To use Chepochem in a project::
 
-    import langchain_code_loader
+    import chepochem

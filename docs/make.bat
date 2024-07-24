@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=langchain_code_loader
+set SPHINXPROJ=chepochem
 
 if "%1" == "" goto help
 

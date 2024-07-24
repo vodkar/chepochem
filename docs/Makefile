@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = langchain_code_loader
+SPHINXPROJ    = chepochem
 SOURCEDIR     = .
 BUILDDIR      = _build
 
